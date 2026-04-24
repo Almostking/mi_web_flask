@@ -2,14 +2,21 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primera web Flask</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Mi Web Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Hola, este es mi primer proyecto Flask</h1>
-    <p>La estructura ya está funcionando.</p>
 
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<div class="container">
+    <h1>Mi Web Flask 🚀</h1>
+
+    <form action="/contacto" method="POST">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="email" name="email" placeholder="Correo" required>
+        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
 </body>
 </html>
