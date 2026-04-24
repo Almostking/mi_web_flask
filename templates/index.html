@@ -2,21 +2,240 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi Web Flask</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximiliano Turres | Portafolio Profesional</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
-<div class="container">
-    <h1>Mi Web Flask 🚀</h1>
+    <header class="hero" id="inicio">
+        <nav class="navbar">
+            <div class="marca">
+                <span>MT</span>
+                <h2>Maximiliano Turres</h2>
+            </div>
 
-    <form action="/contacto" method="POST">
-        <input type="text" name="nombre" placeholder="Nombre" required>
-        <input type="email" name="email" placeholder="Correo" required>
-        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
-        <button type="submit">Enviar</button>
-    </form>
-</div>
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="redes-laterales">
+            <a href="https://www.linkedin.com/in/maximiliano-turres-570609124/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:maximiliano.turresz@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://wa.me/56966329119" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+
+        <section class="hero-contenido">
+            <h1>Maximiliano <span>Turres</span></h1>
+            <h3>Ingeniero Mecánico | Estudiante de Ingeniería Informática</h3>
+            <p>Desarrollo Web · Soporte Técnico · Mecánica · Gasfitería Profesional</p>
+
+            <div class="botones">
+                <a href="#portafolio" class="btn btn-principal">Ver mis proyectos</a>
+                <a href="#contacto" class="btn btn-secundario">Contacto</a>
+            </div>
+        </section>
+    </header>
+
+    <section class="sobre-mi" id="sobre-mi">
+        <div class="contenedor sobre-grid">
+            <div class="texto-sobre">
+                <p class="etiqueta">SOBRE MÍ</p>
+                <h2>I code,<br><span>therefore I solve.</span></h2>
+
+                <p>
+                    Soy Maximiliano Turres, profesional con formación en mecánica e informática.
+                    Cuento con experiencia en mantención de maquinaria, vehículos automotrices,
+                    sistemas electrónicos, instalaciones sanitarias y desarrollo de soluciones web.
+                </p>
+
+                <p>
+                    Actualmente curso Ingeniería Informática, integrando conocimientos técnicos
+                    de terreno con herramientas digitales para crear soluciones funcionales,
+                    ordenadas y profesionales.
+                </p>
+            </div>
+
+            <div class="foto-perfil">
+                <img src="{{ url_for('static', filename='img/perfil.jpg') }}" alt="Foto de Maximiliano Turres">
+            </div>
+
+            <div class="datos-personales">
+                <div class="dato">
+                    <i class="fa-regular fa-user"></i>
+                    <p><strong>Nombre:</strong><br>Maximiliano Turres</p>
+                </div>
+
+                <div class="dato">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p><strong>Ubicación:</strong><br>Iquique, Chile</p>
+                </div>
+
+                <div class="dato">
+                    <i class="fa-regular fa-envelope"></i>
+                    <p><strong>Email:</strong><br>maximiliano.turresz@gmail.com</p>
+                </div>
+
+                <div class="dato">
+                    <i class="fa-solid fa-phone"></i>
+                    <p><strong>Teléfono:</strong><br>+56 9 6632 9119</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="habilidades" id="habilidades">
+        <div class="contenedor">
+            <p class="etiqueta verde">HABILIDADES</p>
+            <h2>Mis habilidades técnicas</h2>
+
+            <div class="grid-habilidades">
+                <div class="skill">
+                    <i class="fa-brands fa-html5"></i>
+                    <h3>HTML</h3>
+                    <div class="barra"><span style="width: 90%;"></span></div>
+                    <p>90%</p>
+                </div>
+
+                <div class="skill">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <h3>CSS</h3>
+                    <div class="barra"><span style="width: 85%;"></span></div>
+                    <p>85%</p>
+                </div>
+
+                <div class="skill">
+                    <i class="fa-brands fa-python"></i>
+                    <h3>Python</h3>
+                    <div class="barra"><span style="width: 80%;"></span></div>
+                    <p>80%</p>
+                </div>
+
+                <div class="skill">
+                    <i class="fa-solid fa-flask"></i>
+                    <h3>Flask</h3>
+                    <div class="barra"><span style="width: 75%;"></span></div>
+                    <p>75%</p>
+                </div>
+
+                <div class="skill">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <h3>Soporte Técnico</h3>
+                    <div class="barra"><span style="width: 90%;"></span></div>
+                    <p>90%</p>
+                </div>
+
+                <div class="skill">
+                    <i class="fa-solid fa-gears"></i>
+                    <h3>Mecánica</h3>
+                    <div class="barra"><span style="width: 85%;"></span></div>
+                    <p>85%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="experiencia" id="experiencia">
+        <div class="contenedor">
+            <p class="etiqueta">EXPERIENCIA</p>
+            <h2>Experiencia profesional</h2>
+
+            <div class="linea-tiempo">
+                <div class="item-exp">
+                    <div class="icono-exp"><i class="fa-solid fa-truck"></i></div>
+                    <h3>Mecánica Automotriz</h3>
+                    <span>2015 - 2020</span>
+                    <p>Mantención preventiva y correctiva de camiones, maquinaria pesada y sistemas mecánicos.</p>
+                </div>
+
+                <div class="item-exp">
+                    <div class="icono-exp"><i class="fa-solid fa-faucet-drip"></i></div>
+                    <h3>Gasfitería e Instalaciones</h3>
+                    <span>2012 - Actualidad</span>
+                    <p>Instalaciones sanitarias, redes de agua potable, alcantarillado, cámaras, PPR, HDPE, PVC y cobre.</p>
+                </div>
+
+                <div class="item-exp">
+                    <div class="icono-exp"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3>Desarrollo Web</h3>
+                    <span>2023 - Actualidad</span>
+                    <p>Desarrollo de páginas y sistemas web usando Python, Flask, HTML, CSS y bases de datos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portafolio" id="portafolio">
+        <div class="contenedor">
+            <p class="etiqueta verde">PORTAFOLIO</p>
+            <h2>Proyectos destacados</h2>
+
+            <div class="grid-portafolio">
+                <div class="proyecto">
+                    <div class="img-proyecto img-uno"></div>
+                    <div class="info-proyecto">
+                        <h3>Página Personal Flask</h3>
+                        <p>Sitio web profesional desarrollado con Python, Flask, HTML y CSS.</p>
+                        <a href="#inicio">Ver proyecto</a>
+                    </div>
+                </div>
+
+                <div class="proyecto">
+                    <div class="img-proyecto img-dos"></div>
+                    <div class="info-proyecto">
+                        <h3>Sistema de Gestión</h3>
+                        <p>Aplicación web para gestión de información, usuarios y registros técnicos.</p>
+                        <a href="#inicio">Ver proyecto</a>
+                    </div>
+                </div>
+
+                <div class="proyecto">
+                    <div class="img-proyecto img-tres"></div>
+                    <div class="info-proyecto">
+                        <h3>Soporte y Mantención</h3>
+                        <p>Soluciones técnicas en hardware, software, redes y procesos operativos.</p>
+                        <a href="#inicio">Ver proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+        <div class="contenedor contacto-grid">
+            <div>
+                <p class="etiqueta">CONTACTO</p>
+                <h2>Hablemos</h2>
+                <p>Si tienes un proyecto o necesitas apoyo técnico, puedes escribirme directamente.</p>
+            </div>
+
+            <form action="/contacto" method="POST">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar mensaje <i class="fa-regular fa-paper-plane"></i></button>
+            </form>
+
+            <div class="info-contacto">
+                <p><i class="fa-regular fa-envelope"></i> maximiliano.turresz@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +56 9 6632 9119</p>
+                <p><i class="fa-solid fa-location-dot"></i> Iquique, Chile</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Maximiliano Turres. Todos los derechos reservados.</p>
+        <p>Diseñado y desarrollado con Flask.</p>
+    </footer>
 
 </body>
 </html>

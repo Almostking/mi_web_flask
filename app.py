@@ -12,8 +12,12 @@ def contacto():
     email = request.form['email']
     mensaje = request.form['mensaje']
 
+    print("Nuevo mensaje recibido:")
     print(f"Nombre: {nombre}")
     print(f"Email: {email}")
     print(f"Mensaje: {mensaje}")
 
     return redirect('/')
+
+if __name__ == '__main__':
+    app.run(debug=True)
