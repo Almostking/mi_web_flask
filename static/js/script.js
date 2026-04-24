@@ -1,0 +1,1 @@
+console.log("Proyecto Flask cargado correctamente");
